@@ -18,6 +18,7 @@ class CreateSupirsTable extends Migration
             $table->timestamps();
             $table->string('nama');
             $table->string('nomor');
+            $table->string('warna');
         });
     }
 

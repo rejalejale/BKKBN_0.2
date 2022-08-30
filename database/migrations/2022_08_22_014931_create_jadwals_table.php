@@ -22,7 +22,7 @@ class CreateJadwalsTable extends Migration
             $table->text('keterangan')->nullable();
             $table->text('tujuan')->nullable();
             $table->text('bidang')->nullable();
-            $table->tinyInteger('status');
+            $table->text('status');
             $table->foreignIdFor(supir::class)->constrained()->cascadeOnDelete();
             $table->foreignIdFor(mobil::class)->constrained()->cascadeOnDelete();
             
