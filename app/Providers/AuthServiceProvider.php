@@ -39,7 +39,7 @@ class AuthServiceProvider extends ServiceProvider
             }
 
             foreach ($permissionArray as $title => $roles) {
-                Gate->define($title, function (User $user) use ($roles) {
+                Gate::define($title, function (User $user) use ($roles) {
                     return count(array_intersect($user->roles->pluck('id')->toArray(), $roles));
                 });
             }
